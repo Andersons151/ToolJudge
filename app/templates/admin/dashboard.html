@@ -1,0 +1,56 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+
+<h1 class="mb-4">Dashboard</h1>
+
+<h3>Articles</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Featured</th>
+            <th>Published</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for article in articles %}
+        <tr>
+            <td>{{ article.title }}</td>
+            <td>{{ article.category.name }}</td>
+
+            <!-- FEATURED BADGE -->
+            <td>
+                {% if article.is_featured %}
+                    <span class="badge bg-success">Featured</span>
+                {% else %}
+                    <span class="badge bg-secondary">No</span>
+                {% endif %}
+            </td>
+
+            <td>{{ "Yes" if article.published else "No" }}</td>
+
+            <td>
+                <a href="/admin/articles/edit/{{ article.id }}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/admin/articles/delete/{{ article.id }}" class="btn btn-sm btn-danger">Delete</a>
+
+                <!-- FEATURE TOGGLE BUTTON -->
+                {% if article.is_featured %}
+                    <a href="/admin/articles/feature/{{ article.id }}" class="btn btn-sm btn-warning">
+                        Unfeature
+                    </a>
+                {% else %}
+                    <a href="/admin/articles/feature/{{ article.id }}" class="btn btn-sm btn-success">
+                        Feature
+                    </a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

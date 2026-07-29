@@ -1,0 +1,6 @@
+FLASK_ENV = production
+SECRET_KEY = your-long-secret-key
+DATABASE_URL = postgres://xxxx:xxxx@xxxx:5432/xxxx
+PYTHON_VERSION = 3.10
+WEB_CONCURRENCY = 2
+GUNICORN_CMD_ARGS = --timeout 120 --log-level info

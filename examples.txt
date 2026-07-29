@@ -1,0 +1,604 @@
+TinyMCE will unlock instantly
+toolbench.co.uk
+www.toolbench.co.uk
+localhost
+localhost:5000
+127.0.0.1
+127.0.0.1:5000
+
+
+
+{
+  "title": "Bosch GSB 18V-55 vs Milwaukee M18 Fuel – Brushless Drill Comparison",
+  "slug": "bosch-gsb18v55-vs-milwaukee-m18fuel-comparison",
+  "summary": "We compare the Bosch GSB 18V-55 against the Milwaukee M18 Fuel to see which brushless drill delivers the best mix of power, build quality, and value for money.",
+  "featured_image": "https://m.media-amazon.com/images/I/71rlawa2ecL._AC_SL1500_.jpg",
+
+  "content": "<h2>Overview</h2><p>This comparison looks at two of the most respected brushless drills on the market: the Bosch GSB 18V-55 and the Milwaukee M18 Fuel. Both are professional-grade tools, but they serve slightly different users and priorities.</p><h2>Performance Comparison</h2><p>The Milwaukee M18 Fuel is known for raw power, delivering exceptional torque and drilling speed. Bosch, while slightly less aggressive, offers smoother control and excellent precision. Milwaukee wins on brute force; Bosch wins on finesse.</p><h2>Build Quality</h2><p>Milwaukee is built like a tank — thick plastics, reinforced gearbox housing, and a rugged feel. Bosch is lighter, more ergonomic, and easier to handle for long sessions. Both are premium, but Milwaukee feels more industrial.</p><h2>Battery & Runtime</h2><p>Milwaukee’s M18 system is legendary for runtime and durability. Bosch’s ProCORE batteries are excellent too, but Milwaukee still edges ahead in heavy-duty applications.</p><h2>Which Should You Buy?</h2><p>If you want maximum power and durability for trade work, Milwaukee is the clear winner. If you want a lighter, more ergonomic drill with excellent precision and value, Bosch is the smarter choice.</p>",
+
+  "comparison": {
+    "left_title": "Bosch GSB 18V-55 Brushless Drill",
+    "left_image": "https://example.com/bosch.jpg",
+    "left_affiliate": "https://amazon.co.uk/bosch-gsb18v55",
+
+    "right_title": "Milwaukee M18 Fuel Brushless Drill",
+    "right_image": "https://example.com/milwaukee.jpg",
+    "right_affiliate": "https://amazon.co.uk/milwaukee-m18fuel"
+  },
+
+  "faq": [
+    {
+      "question": "Which drill is more powerful?",
+      "answer": "The Milwaukee M18 Fuel delivers more torque and faster drilling speeds, making it stronger overall."
+    },
+    {
+      "question": "Which drill is lighter?",
+      "answer": "The Bosch GSB 18V-55 is noticeably lighter and more ergonomic for long use."
+    },
+    {
+      "question": "Which drill is better for professionals?",
+      "answer": "Milwaukee is preferred for heavy-duty trade work due to its durability and power."
+    },
+    {
+      "question": "Which drill offers better value?",
+      "answer": "Bosch typically offers better value for money while still delivering professional performance."
+    }
+  ],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "ProductComparison",
+    "name": "Bosch GSB 18V-55 vs Milwaukee M18 Fuel Comparison",
+    "description": "A detailed comparison between the Bosch GSB 18V-55 and the Milwaukee M18 Fuel brushless drills.",
+    "product1": {
+      "@type": "Product",
+      "name": "Bosch GSB 18V-55 Brushless Drill",
+      "image": "https://example.com/bosch.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://amazon.co.uk/bosch-gsb18v55",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    "product2": {
+      "@type": "Product",
+      "name": "Milwaukee M18 Fuel Brushless Drill",
+      "image": "https://example.com/milwaukee.jpg",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://amazon.co.uk/milwaukee-m18fuel",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+
+  "categories": ["drills", "comparisons"]
+}
+
+https://www.amazon.co.uk/deals?discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522accessType%255C%2522%253A%255B%255C%25221%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&_encoding=UTF8&pd_rd_w=HKogR&content-id=amzn1.sym.5896a651-f67f-4c6f-872c-2da671d5972e&pf_rd_p=5896a651-f67f-4c6f-872c-2da671d5972e&pf_rd_r=2AFGTDSR9CH2R8DK2VJA&pd_rd_wg=6inhP&pd_rd_r=e6e2ecbe-8d3d-4a5e-ad5f-9e3553e444c8&linkCode=ll2&tag=footypal0f-21&linkId=8cf5442a8594b6b269da25b584b1052e&ref_=as_li_ss_tl
+
+
+
+
+Create me a detailed product review on. with rating that you think is appropriate out of 5 
+
+Product name: Makita DHP485 Brushless Drill
+featured_image: https://m.media-amazon.com/images/I/71rlawa2ecL._AC_SL1500_.jpg
+Affiliate link: https://www.amazon.co.uk/Bosch-Professional-06019G0309-excluding-Rechargeable/dp/B083QM7PLT/?_encoding=UTF8&pd_rd_w=nwNqp&content-id=amzn1.sym.ac7f6ca0-8183-4ffa-acdd-dc1812af996a%3Aamzn1.symc.752cde0b-d2ce-4cce-9121-769ea438869e&pf_rd_p=ac7f6ca0-8183-4ffa-acdd-dc1812af996a&pf_rd_r=EDSDXAJEFBHWE1D2GASK&pd_rd_wg=GdLGk&pd_rd_r=5d8feb6e-7e45-451a-8639-11972cdaaad9&ref_=pd_hp_d_atf_ci_mcx_mr_&th=1@&tag=footypal0f-21
+Category: power-tools, reviews
+
+produce json comparing. give pro and details and make it super detailed comparsion
+
+featured_image leave it blank
+
+Left product title: Bosch GSB 18V-55
+Left image URL: https://example.com/bosch.jpg
+Left affiliate link: https://amazon.co.uk/bosch
+
+Right product title: Milwaukee M18 Fuel
+Right image URL: https://example.com/milwaukee.jpg
+Right affiliate link: https://amazon.co.uk/milwaukee
+
+Category: drills, comparsion
+
+
+
+Ben, here’s the exact DIY prompt format you should use every time going forward.
+This is the clean, reliable version that will always produce:
+
+Tools list
+
+Materials list
+
+Amazon search links with your affiliate tag
+
+Step‑by‑step instructions
+
+Safety notes
+
+FAQ
+
+Schema
+
+Correct categories
+
+No CTA blocks
+
+This is the prompt you copy/paste and fill in the blanks.
+
+
+
+
+
+
+
+{
+  "title": "How to Install Laminate Flooring (Beginner Friendly DIY Guide)",
+  "slug": "install-laminate-flooring-diy-guide",
+  "summary": "A complete beginner-friendly guide to installing laminate flooring, including tools, materials, Amazon links, and step-by-step instructions.",
+  "featured_image": "https://m.media-amazon.com/images/I/81xqfN3W8QL._AC_SL1500_.jpg",
+
+  "content": "<h2>Tools Required</h2><ul><li>Laminate flooring installation kit – <a href='https://www.amazon.co.uk/dp/B07XQ6V9Y8?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Rubber mallet – <a href='https://www.amazon.co.uk/dp/B08C2ZQY7T?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Utility knife – <a href='https://www.amazon.co.uk/dp/B0001P0Z5E?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Jigsaw or circular saw – <a href='https://www.amazon.co.uk/dp/B00N9Z3NUS?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Measuring tape – <a href='https://www.amazon.co.uk/dp/B0001P0Z5E?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Spacers for expansion gap – <a href='https://www.amazon.co.uk/dp/B07XQ6V9Y8?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Safety goggles – <a href='https://www.amazon.co.uk/dp/B08B1VJQ6Z?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li></ul><h2>Materials Required</h2><ul><li>Laminate flooring packs – <a href='https://www.amazon.co.uk/s?k=laminate+flooring&tag=footypal0f-21' target='_blank'>Browse options</a></li><li>Underlay – <a href='https://www.amazon.co.uk/dp/B07G2Y8Y8T?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Threshold bars – <a href='https://www.amazon.co.uk/dp/B07QKXJZ2L?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li><li>Floor trim/skirting – <a href='https://www.amazon.co.uk/s?k=floor+trim&tag=footypal0f-21' target='_blank'>Browse options</a></li><li>Adhesive for trim – <a href='https://www.amazon.co.uk/dp/B0001P0Z5E?tag=footypal0f-21' target='_blank'>Buy on Amazon</a></li></ul><h2>Step-by-Step Instructions</h2><ol><li><strong>Prepare the room:</strong> Remove old flooring, clean the subfloor, and ensure it is level.</li><li><strong>Lay the underlay:</strong> Roll it out across the entire floor and tape the seams.</li><li><strong>Plan your layout:</strong> Measure the room and decide the direction of the planks.</li><li><strong>Start your first row:</strong> Place spacers along the wall to maintain a 10mm expansion gap.</li><li><strong>Click the planks together:</strong> Use the tapping block and mallet to secure each joint.</li><li><strong>Cut planks to size:</strong> Use a jigsaw or circular saw for end pieces.</li><li><strong>Continue row by row:</strong> Stagger joints for strength and appearance.</li><li><strong>Install final row:</strong> Use the pull bar to lock the last pieces in place.</li><li><strong>Add trim and thresholds:</strong> Cover expansion gaps with skirting or trim.</li></ol><h2>Safety Notes</h2><ul><li>Always wear safety goggles when cutting laminate.</li><li>Use a dust mask when sawing.</li><li>Ensure the subfloor is level to avoid trip hazards.</li></ul>",
+
+  "faq": [
+    {
+      "question": "Do I need underlay for laminate flooring?",
+      "answer": "Yes, underlay provides cushioning, reduces noise, and helps level minor imperfections."
+    },
+    {
+      "question": "Can I install laminate flooring over carpet?",
+      "answer": "No, carpet is too soft and unstable. Remove it before installation."
+    },
+    {
+      "question": "How long does laminate flooring take to install?",
+      "answer": "A typical room takes 3–6 hours depending on experience and room size."
+    },
+    {
+      "question": "Do I need to glue laminate flooring?",
+      "answer": "No, most modern laminate uses a click-lock system and requires no glue."
+    }
+  ],
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install Laminate Flooring",
+    "description": "A complete DIY guide for installing laminate flooring with tools, materials, and step-by-step instructions.",
+    "step": [
+      "Prepare the room and clean the subfloor.",
+      "Lay the underlay.",
+      "Plan the layout.",
+      "Install the first row with spacers.",
+      "Click planks together.",
+      "Cut planks to size.",
+      "Continue row by row.",
+      "Install final row.",
+      "Add trim and thresholds."
+    ]
+  },
+
+  "categories": ["drills", "diy-projects"]
+}
+
+Power Tools
+
+Hand Tools
+
+Garden Tools
+
+Hardware Supplies
+
+
+I want to change the top four categories
+
+
+Power Tools
+
+Hand Tools
+
+Garden Tools
+
+Hardware Supplies instead of routers, Worktop Tools , Saws and drills
+
+ categories = [
+        # TOOL CATEGORIES
+        Category(
+            name="Routers",
+            slug="routers",
+            icon="🪚",
+            description="Reviews, guides and comparisons for woodworking routers.",
+            is_main=True
+        ),
+        Category(
+            name="Worktop Tools",
+            slug="worktop-tools",
+            icon="🔧",
+            description="Tools and jigs for kitchen worktop fitting.",
+            is_main=True
+        ),
+        Category(
+            name="Saws",
+            slug="saws",
+            icon="🪚",
+            description="Circular saws, jigsaws, mitre saws and cutting guides.",
+            is_main=True
+        ),
+        Category(
+            name="Drills",
+            slug="drills",
+            icon="🔩",
+            description="Cordless drills, SDS drills and drill accessories.",
+            is_main=True
+        ),
+
+        # CONTENT CATEGORIES
+        Category(
+            name="Reviews",
+            slug="reviews",
+            icon="⭐",
+            description="In-depth tool reviews with images, pros/cons and buying advice.",
+            is_main=False
+        ),
+        Category(
+            name="Comparisons",
+            slug="comparisons",
+            icon="⚖️",
+            description="Tool vs tool comparisons and best-of lists.",
+            is_main=False
+        ),
+        Category(
+            name="DIY Projects",
+            slug="diy-projects",
+            icon="🛠️",
+            description="Step-by-step woodworking, kitchen fitting and home improvement guides.",
+            is_main=False
+        )
+    ]
+
+
+
+Create a detailed product review in JSON format using the following fields:
+Product name: Makita DHP485 Brushless Drill
+featured_image: https://m.media-amazon.com/images/I/71rlawa2ecL.AC_SL1500.jpg  
+affiliate_link: https://www.amazon.co.uk/...
+Category: power-tools, reviews
+
+SEO Requirements:  
+Generate SEO metadata for the article, including:
+
+seo_title — strong, keyword‑rich title
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+Content Requirements:  
+Write a highly detailed professional review suitable for tradespeople.
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons
+
+Conclusion
+
+Additional Requirements:
+
+Include a numeric rating out of 5.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org Product object.
+
+Output only JSON, matching this exact structure:
+
+title
+slug
+summary
+featured_image
+affiliate_link
+rating
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+
+Important:
+
+affiliate_link must NOT be inside the schema product object.
+
+All SEO fields must be top‑level fields.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+Do not place affiliate_link inside a product object. It must be at the top level.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reusable Prompt for Comparison Articles (Copy & Paste)
+Create a detailed tool comparison article in JSON format using the following fields:
+
+Left product title: [INSERT LEFT PRODUCT NAME]
+
+Left image URL: [INSERT LEFT IMAGE URL]
+
+Left affiliate link: [INSERT LEFT AFFILIATE LINK]
+
+Right product title: [INSERT RIGHT PRODUCT NAME]
+
+Right image URL: [INSERT RIGHT IMAGE URL]
+
+Right affiliate link: [INSERT RIGHT AFFILIATE LINK]
+
+featured_image: [INSERT FEATURED IMAGE OR LEAVE BLANK]
+
+Category: power-tools, comparison
+
+Requirements:
+
+Write a highly detailed professional comparison suitable for tradespeople.
+
+Include sections: Overview, Power & Performance, Speed & Control, Build Quality, Battery System, Ergonomics, Real‑World Use Cases, Pros & Cons (for each product), Conclusion.
+
+Include a numeric rating out of 5 for each product.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org ProductComparison object.
+
+Output only JSON, matching this structure:
+
+title
+
+slug
+
+summary
+
+featured_image
+
+comparison (object containing left/right product fields)
+
+affiliate_link (optional — top level only)
+
+content (HTML allowed)
+
+faq (array)
+
+schema
+
+categories
+
+Important:
+
+affiliate_link must NOT be inside the comparison object.
+
+featured_image must be at the top level.
+
+Use ToolBench UK tone: professional, trade‑focused, detailed, practical.
+
+
+
+
+
+
+
+Create a detailed tool comparison article in JSON format using the following fields:
+
+Left product title: [INSERT LEFT PRODUCT NAME]
+
+Left image URL: [INSERT LEFT IMAGE URL]
+
+Left affiliate link: [INSERT LEFT AFFILIATE LINK]
+
+Right product title: [INSERT RIGHT PRODUCT NAME]
+
+Right image URL: [INSERT RIGHT IMAGE URL]
+
+Right affiliate link: [INSERT RIGHT AFFILIATE LINK]
+
+featured_image: [INSERT FEATURED IMAGE OR LEAVE BLANK]
+
+categories: power-tools, comparisons
+
+
+SEO Requirements (must be included in JSON):
+Generate full SEO metadata for the article:
+
+seo_title — strong, keyword‑rich, comparison‑focused
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+
+Content Requirements:
+Write a highly detailed professional comparison suitable for tradespeople.
+
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Speed & Control
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons (for each product)
+
+Conclusion
+
+
+Additional Requirements:
+Include a numeric rating out of 5 for each product.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org ProductComparison object.
+
+Output only JSON, matching this exact structure:
+
+Important Rules:
+affiliate_link must NOT be inside the comparison object.
+
+featured_image must be top‑level only.
+
+All SEO fields must be top‑level only.
+
+Use ToolBench UK tone: professional, trade‑focused, detailed, practical.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+
+
+
+
+
+
+
+Create a detailed tool comparison article in JSON format using the following fields:
+
+Left product title: [INSERT LEFT PRODUCT NAME]
+
+Left image URL: [INSERT LEFT IMAGE URL]
+
+Left affiliate link: [INSERT LEFT AFFILIATE LINK]
+
+Right product title: [INSERT RIGHT PRODUCT NAME]
+
+Right image URL: [INSERT RIGHT IMAGE URL]
+
+Right affiliate link: [INSERT RIGHT AFFILIATE LINK]
+
+featured_image: [INSERT FEATURED IMAGE OR LEAVE BLANK]
+
+categories: power-tools, diy-projects
+
+Generate full SEO metadata for the article:
+
+seo_title — strong, keyword‑rich, comparison‑focused
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+
+Content Requirements:
+Write a highly detailed professional comparison suitable for tradespeople.
+
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Speed & Control
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons (for each product)
+
+Conclusion
+
+Additional Requirements:
+Include a numeric rating out of 5 for each product.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org ProductComparison object.
+
+Output only JSON, matching this exact structure:
+
+title
+slug
+summary
+featured_image
+comparison
+affiliate_link
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+
+
+Important Rules:
+affiliate_link must NOT be inside the comparison object.
+
+featured_image must be top‑level only.
+
+All SEO fields must be top‑level only.
+
+Use ToolBench UK tone: professional, trade‑focused, detailed, practical.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+
+
+
+
+

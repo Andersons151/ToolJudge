@@ -1,0 +1,106 @@
+{% extends "public/base.html" %}
+{% block content %}
+
+{% set main_categories = [
+    ('power-tools', 'Explore Power Tool Reviews'),
+    ('hand-tools', 'Explore Hand Tool Reviews'),
+    ('garden-tools', 'Explore Garden Tool Guides'),
+    ('hardware-supplies', 'Explore Hardware Supply Guides')
+] %}
+
+{% set selected = main_categories | random %}
+
+<!-- HERO SECTION -->
+<div class="hero text-center mb-5">
+    <h1 class="fw-bold">NoFoolTools</h1>
+    <p class="lead mt-3">
+        Honest tool reviews, buying guides, comparisons and DIY advice — no fluff, no nonsense.
+    </p>
+    <a href="/category/{{ selected[0] }}" class="btn btn-warning btn-lg mt-3">
+        {{ selected[1] }}
+    </a>
+</div>
+
+<!-- POPULAR CATEGORIES -->
+<div class="home-section mb-5">
+    <h2 class="section-title mb-3">Popular Categories</h2>
+
+    <div class="row g-4">
+        {% for cat in categories %}
+        <div class="col-6 col-md-3">
+            <a href="/category/{{ cat.slug }}" class="text-decoration-none text-dark">
+                <div class="category-card premium-category-card">
+                    <div class="fs-2">{{ cat.icon }}</div>
+                    <h5 class="mt-2">{{ cat.name }}</h5>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- FEATURED ARTICLES -->
+<div class="home-section mb-5">
+    <h2 class="section-title mb-3">Featured Picks</h2>
+
+    <div class="row g-4">
+        {% for article in featured_articles %}
+        <div class="col-md-4">
+            <a href="/article/{{ article.slug }}" class="text-decoration-none text-dark">
+                <div class="featured-article-card">
+
+                    <div class="featured-thumb-wrapper">
+                        <img src="{{ article.featured_image if article.featured_image else '/static/images/bench.png' }}"
+                             class="featured-thumb-img"
+                             alt="{{ article.title }}"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low">
+                    </div>
+
+                    <div class="p-3">
+                        <h4 class="fw-bold">{{ article.title }}</h4>
+                        <p class="article-summary">{{ article.summary }}</p>
+                        <span class="text-primary fw-bold">Read More →</span>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- LATEST ARTICLES -->
+<div class="home-section mb-5">
+    <h2 class="section-title mb-3">Latest Articles</h2>
+
+    <div class="row g-4">
+        {% for article in articles %}
+        <div class="col-md-4">
+            <a href="/article/{{ article.slug }}" class="text-decoration-none text-dark">
+                <div class="latest-article-card">
+
+                    <div class="latest-thumb-wrapper">
+                        <img src="{{ article.featured_image if article.featured_image else '/static/images/bench.png' }}"
+                             class="latest-thumb-img"
+                             alt="{{ article.title }}"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low">
+                    </div>
+
+                    <div class="p-3">
+                        <h5 class="fw-bold">{{ article.title }}</h5>
+                        <p class="article-summary">{{ article.summary }}</p>
+                        <span class="text-secondary fw-bold">Read More →</span>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

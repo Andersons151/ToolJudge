@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Environment Files ---
+.env
+*.env
+.env.*
+
+# --- Flask Instance Folder ---
+instance/
+instance/*.db
+instance/*.sqlite
+instance/*.sqlite3
+
+# --- SQLite Databases ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Virtual Environments ---
+venv/
+env/
+.venv/
+
+# --- OS / Editor Junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+# --- Uploads (optional) ---
+static/uploads/*
+!static/uploads/.gitkeep
+
+# --- Render Build Cache ---
+render-build/
+
+adduser.py

@@ -1,0 +1,185 @@
+
+
+Create a detailed tool comparison article in JSON format using the following fields:
+
+Left product title: [INSERT LEFT PRODUCT NAME]
+
+Left image URL: [INSERT LEFT IMAGE URL]
+
+Left affiliate link: [INSERT LEFT AFFILIATE LINK]
+
+Right product title: [INSERT RIGHT PRODUCT NAME]
+
+Right image URL: [INSERT RIGHT IMAGE URL]
+
+Right affiliate link: [INSERT RIGHT AFFILIATE LINK]
+
+featured_image: [INSERT FEATURED IMAGE OR LEAVE BLANK]
+
+categories: power-tools, diy-projects
+
+Generate full SEO metadata for the article:
+
+seo_title — strong, keyword‑rich, comparison‑focused
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+Create a detailed product review in JSON format using the following fields:
+
+Product name: Makita DHP485 Brushless Drill
+featured_image: https://m.media-amazon.com/images/I/71rlawa2ecL.AC_SL1500.jpg  
+affiliate_link: https://www.amazon.co.uk/...
+Category: power-tools, reviews
+
+SEO Requirements:  
+Generate SEO metadata for the article, including:
+
+seo_title — strong, keyword‑rich title
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+is_featured - true
+
+Content Requirements:  
+Write a highly detailed professional review suitable for tradespeople.
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons
+
+Conclusion
+
+Additional Requirements:
+
+Include a numeric rating out of 5.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org Product object.
+
+Output only JSON, matching this exact structure:
+
+title
+slug
+summary
+featured_image
+affiliate_link
+rating
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+is_featured
+
+Important:
+
+affiliate_link must NOT be inside the schema product object.
+
+All SEO fields must be top‑level fields.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+Do not place affiliate_link inside a product object. It must be at the top level.
+
+
+
+Content Requirements:
+Write a highly detailed professional comparison suitable for tradespeople.
+
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Speed & Control
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons (for each product)
+
+Conclusion
+
+Additional Requirements:
+Include a numeric rating out of 5 for each product.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org ProductComparison object.
+
+Output only JSON, matching this exact structure:
+
+title
+slug
+summary
+featured_image
+comparison
+affiliate_link
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+is_featured
+
+
+Important Rules:
+affiliate_link must NOT be inside the comparison object.
+
+featured_image must be top‑level only.
+
+All SEO fields must be top‑level only.
+
+Use ToolBench UK tone: professional, trade‑focused, detailed, practical.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+
+
+
+
+

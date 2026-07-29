@@ -1,0 +1,84 @@
+Create a detailed DIY project article in JSON format using the following fields:
+
+Project title: [INSERT PROJECT NAME]
+
+featured_image: [INSERT IMAGE URL OR LEAVE BLANK]
+
+categories: diy-projects, [INSERT TOOL CATEGORY]
+
+
+SEO Requirements (must be included in JSON):
+Generate full SEO metadata for the article:
+
+seo_title — strong, keyword‑rich, DIY‑focused
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+is_featured - true
+
+
+
+Content Requirements:
+Write a highly detailed DIY guide suitable for beginners and tradespeople.
+
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Tools Required
+
+Materials Required
+
+Preparation
+
+Step‑by‑Step Instructions (minimum 8–12 steps)
+
+Safety Notes
+
+Common Mistakes
+
+Tips for Best Results
+
+Conclusion
+
+
+Additional Requirements:
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org HowTo object.
+
+Output only JSON, matching this exact structure:
+
+
+title
+slug
+summary
+featured_image
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+is_featured
+
+Important Rules:
+Do NOT include affiliate_link in DIY articles.
+
+All SEO fields must be top‑level only.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+Use ToolBench UK tone: professional, trade‑focused, clear, practical.

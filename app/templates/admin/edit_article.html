@@ -1,0 +1,229 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+
+<h2>Edit Article</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Title</label>
+        <input name="title" class="form-control" value="{{ article.title }}">
+    </div>
+
+    <div class="mb-3">
+        <label>Summary</label>
+        <textarea name="summary" class="form-control">{{ article.summary }}</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Content (HTML)</label>
+        <textarea name="content" rows="12">{{ article.content }}</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Featured Image URL</label>
+        <input name="featured_image" class="form-control" value="{{ article.featured_image }}">
+    </div>
+
+    <div class="mb-3">
+        <label>Affiliate Link</label>
+        <input name="affiliate_link" class="form-control" value="{{ article.affiliate_link }}">
+    </div>
+
+    <div class="mb-3">
+        <label>
+            <input type="checkbox" name="is_featured" value="1"
+                   {% if article.is_featured %}checked{% endif %}>
+            Featured Pick
+        </label>
+    </div>
+
+    <hr>
+
+    <h4>Categories</h4>
+    {% for cat in categories %}
+        <label class="me-3">
+            <input type="checkbox" name="categories[]" value="{{ cat.slug }}"
+                   {% if cat in article.categories %}checked{% endif %}>
+            {{ cat.name }}
+        </label>
+    {% endfor %}
+
+    <hr>
+
+    <!-- ⭐ AUTO-SYNCED FAQ JSON -->
+    <h4>FAQ (JSON)</h4>
+    <textarea name="faq" class="form-control" rows="6" readonly>{{ faq_json }}</textarea>
+
+    <!-- ⭐ AUTO-GENERATED SCHEMA JSON -->
+    <h4 class="mt-4">Schema (JSON)</h4>
+    <textarea name="schema" class="form-control" rows="6" readonly>{{ schema_json }}</textarea>
+
+    <!-- ⭐ AUTO-SYNCED COMPARISON JSON -->
+    <h4 class="mt-4">Comparison (JSON)</h4>
+    <textarea name="comparison" class="form-control" rows="6" readonly>{{ comparison_json }}</textarea>
+
+    <hr>
+
+    <h4>SEO Fields</h4>
+
+    <div class="mb-3">
+        <label>SEO Title</label>
+        <input name="seo_title" class="form-control" value="{{ article.seo_title }}">
+    </div>
+
+    <div class="mb-3">
+        <label>SEO Description</label>
+        <textarea name="seo_description" class="form-control">{{ article.seo_description }}</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>SEO Keywords</label>
+        <input name="seo_keywords" class="form-control" value="{{ article.seo_keywords }}">
+    </div>
+
+    <div class="mb-3">
+        <label>Canonical URL</label>
+        <input name="canonical_url" class="form-control" value="{{ article.canonical_url }}">
+    </div>
+
+    <div class="mb-3">
+        <label>OG Image</label>
+        <input name="og_image" class="form-control" value="{{ article.og_image }}">
+    </div>
+
+    <div class="mb-3">
+        <label>Twitter Image</label>
+        <input name="twitter_image" class="form-control" value="{{ article.twitter_image }}">
+    </div>
+
+    <button class="btn btn-success mt-4">Save Changes</button>
+
+</form>
+
+<!-- TinyMCE -->
+<script src="https://cdn.tiny.cloud/1/04yy5dk2x9alu1fv3ums28wkeumq6pjqtvuqi66dvndszxq4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+tinymce.init({
+    selector: 'textarea[name=content]',
+    height: 600,
+    menubar: true,
+
+    plugins: 'image link lists table code fullscreen',
+    toolbar: `
+        undo redo |
+        styles | bold italic underline |
+        alignleft aligncenter alignright |
+        bullist numlist |
+        image link table |
+        comparisonTable faqGenerator |
+        code fullscreen
+    `,
+
+    automatic_uploads: true,
+    images_upload_url: '/admin/upload-image',
+
+    valid_elements: '*[*]',  /* prevents TinyMCE stripping FAQ + comparison HTML */
+
+    setup: function (editor) {
+
+        // ⭐ Comparison Table Button
+        editor.ui.registry.addButton('comparisonTable', {
+            text: 'Comparison Table',
+            icon: 'table',
+            onAction: function () {
+                const html = `
+<section class="comparison-table-block">
+<table class="comparison-table">
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Product A</th>
+            <th>Product B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Power</td>
+            <td>500W</td>
+            <td>650W</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>1.2kg</td>
+            <td>1.5kg</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>£49.99</td>
+            <td>£59.99</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+<br>
+`;
+                editor.insertContent(html);
+            }
+        });
+
+        // ⭐ FAQ Generator Button
+        editor.ui.registry.addButton('faqGenerator', {
+            text: 'Insert FAQ',
+            icon: 'help',
+            onAction: function () {
+
+                const html = `
+<section class="faq-block">
+    <h3>Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+        <p><strong>Q: What is the main benefit of this tool?</strong></p>
+        <p>A: It provides excellent performance for everyday DIY and professional tasks.</p>
+    </div>
+
+    <div class="faq-item">
+        <p><strong>Q: Is this tool suitable for beginners?</strong></p>
+        <p>A: Yes, it is easy to use and comes with clear instructions.</p>
+    </div>
+
+    <div class="faq-item">
+        <p><strong>Q: Does it come with a warranty?</strong></p>
+        <p>A: Most retailers offer a 1–2 year warranty depending on the model.</p>
+    </div>
+
+</section>
+<br>
+`;
+
+                editor.insertContent(html);
+            }
+        });
+
+    },
+
+    images_upload_handler: function (blobInfo, success, failure) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/admin/upload-image');
+        xhr.onload = function() {
+            if (xhr.status !== 200) {
+                failure('Upload failed: ' + xhr.status);
+                return;
+            }
+            var json = JSON.parse(xhr.responseText);
+            if (!json.location) {
+                failure('Invalid JSON: ' + xhr.responseText);
+                return;
+            }
+            success(json.location);
+        };
+
+        var formData = new FormData();
+        formData.append('file', blobInfo.blob(), blobInfo.filename());
+        xhr.send(formData);
+    }
+});
+</script>
+
+{% endblock %}

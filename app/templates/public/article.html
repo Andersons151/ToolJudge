@@ -1,0 +1,172 @@
+{% extends "public/base.html" %}
+{% block content %}
+
+<!-- Breadcrumbs -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+        {% for cat in article.categories %}
+            {% if cat.is_main %}
+                <li class="breadcrumb-item">
+                    <a href="/category/{{ cat.slug }}">{{ cat.name }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        <li class="breadcrumb-item active" aria-current="page">{{ article.title }}</li>
+    </ol>
+</nav>
+
+<!-- Title -->
+<h1 class="fw-bold mb-3">{{ article.title }}</h1>
+
+<!-- Category Badges -->
+<div class="mb-3">
+    {% for cat in article.categories %}
+        <span class="badge bg-secondary me-1">{{ cat.icon }} {{ cat.name }}</span>
+    {% endfor %}
+</div>
+
+<!-- Featured Image -->
+<div class="text-center mb-4">
+    <figure class="featured-image-wrapper">
+        <img src="{{ article.featured_image if article.featured_image else '/static/images/bench.png' }}"
+             alt="{{ article.title }}"
+             class="featured-image img-fluid"
+             loading="lazy"
+             decoding="async"
+             fetchpriority="low">
+
+        <figcaption class="featured-caption text-muted mt-2">
+            {{ article.title }}
+        </figcaption>
+    </figure>
+</div>
+
+{% if comparison %}
+<div class="comparison-wrapper mb-5">
+
+    <div class="row text-center">
+
+        <!-- LEFT PRODUCT -->
+        <div class="col-md-6 mb-4">
+            <div class="comparison-card">
+                <img src="{{ comparison.left_image }}" 
+                     class="comparison-img mb-3" 
+                     alt="{{ comparison.left_title }}"
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low">
+
+                <h4 class="fw-bold">{{ comparison.left_title }}</h4>
+
+                <a href="{{ comparison.left_affiliate }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-warning mt-3">
+                    View on Amazon
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT PRODUCT -->
+        <div class="col-md-6 mb-4">
+            <div class="comparison-card">
+                <img src="{{ comparison.right_image }}" 
+                     class="comparison-img mb-3" 
+                     alt="{{ comparison.right_title }}"
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low">
+
+                <h4 class="fw-bold">{{ comparison.right_title }}</h4>
+
+                <a href="{{ comparison.right_affiliate }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-warning mt-3">
+                    View on Amazon
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endif %}
+
+<!-- Affiliate CTA Block -->
+{% if article.affiliate_link %}
+<div class="affiliate-box premium-affiliate-box">
+    <h5 class="fw-bold">Recommended Purchase</h5>
+    <p>Get the best price for this tool using our trusted affiliate link below — NoFoolTools only recommends products we genuinely rate.</p>
+    <a href="{{ article.affiliate_link }}" 
+       class="btn btn-warning btn-lg premium-cta-btn"
+       target="_blank"
+       rel="noopener noreferrer">
+        View on Amazon
+    </a>
+</div>
+{% endif %}
+
+<!-- Article Content -->
+<div class="article-body mt-4">
+    {{ article.content|safe }}
+</div>
+
+<!-- FAQ Section -->
+{% if faq_list %}
+<h3 class="mt-5 mb-3 fw-bold">Frequently Asked Questions</h3>
+
+{% for item in faq_list %}
+<div class="faq-item mb-3">
+    <strong>{{ item.question }}</strong>
+    <p>{{ item.answer }}</p>
+</div>
+{% endfor %}
+{% endif %}
+
+<!-- CTA After Content -->
+{% if article.affiliate_link %}
+<div class="affiliate-box premium-affiliate-box mt-4">
+    <h5 class="fw-bold">Ready to Buy?</h5>
+    <p>Click below to check the latest price and availability — updated daily.</p>
+    <a href="{{ article.affiliate_link }}" 
+       class="btn btn-primary btn-lg premium-cta-btn"
+       target="_blank"
+       rel="noopener noreferrer">
+        Check Price
+    </a>
+</div>
+{% endif %}
+
+<!-- Related Articles -->
+<h3 class="mt-5 mb-3 fw-bold">Related Articles</h3>
+<div class="list-group mb-5">
+    {% for related in related_articles %}
+        <a href="/article/{{ related.slug }}" class="list-group-item list-group-item-action">
+            {{ related.title }}
+        </a>
+    {% endfor %}
+</div>
+
+<!-- Sticky CTA (Mobile) -->
+{% if article.affiliate_link %}
+<div class="sticky-cta d-md-none premium-sticky-cta">
+    <a href="{{ article.affiliate_link }}" 
+       target="_blank"
+       rel="noopener noreferrer">
+        Buy Now on Amazon →
+    </a>
+</div>
+{% endif %}
+
+<!-- Schema JSON-LD -->
+{% if article.schema %}
+<script type="application/ld+json">
+    {{ article.schema | safe }}
+</script>
+{% endif %}
+
+{% endblock %}

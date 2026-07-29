@@ -1,0 +1,43 @@
+{% extends "public/base.html" %}
+{% block content %}
+
+<h1 class="mb-4">Search Results</h1>
+
+{% if q %}
+    <p class="lead">Showing results for: <strong>{{ q }}</strong></p>
+{% endif %}
+
+{% if results|length == 0 %}
+    <div class="alert alert-warning">
+        No results found. Try another search — NoFoolTools is always expanding, so check back soon.
+    </div>
+{% else %}
+    <div class="row g-4">
+        {% for article in results %}
+        <div class="col-md-4">
+            <a href="/article/{{ article.slug }}" class="text-decoration-none text-dark">
+                <div class="latest-article-card">
+
+                    <div class="latest-thumb-wrapper">
+                        <img src="{{ article.featured_image if article.featured_image else '/static/images/bench.png' }}"
+                             class="latest-thumb-img"
+                             alt="{{ article.title }}"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low">
+                    </div>
+
+                    <div class="p-3">
+                        <h5 class="fw-bold">{{ article.title }}</h5>
+                        <p class="article-summary">{{ article.summary }}</p>
+                        <span class="text-secondary fw-bold">Read More →</span>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% endblock %}

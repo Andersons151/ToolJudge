@@ -1,0 +1,26 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+
+<h1 class="mb-4">Create New Article</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label class="form-label">Topic</label>
+        <input type="text" name="topic" class="form-control" placeholder="e.g. Best Routers for Worktops" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category_id" class="form-select" required>
+            {% for cat in categories %}
+            <option value="{{ cat.id }}">{{ cat.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button class="btn btn-success">Generate Article</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "public/base.html" %}
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="fw-bold mb-4">Privacy Policy</h1>
+
+    <p class="lead">
+        This Privacy Policy explains how ToolBench UK collects, uses, and protects your personal information in accordance with UK GDPR.
+    </p>
+
+    <h3 class="fw-bold mt-4">Information We Collect</h3>
+    <ul>
+        <li>Basic analytics data (page views, device type, browser)</li>
+        <li>Search queries entered on the site</li>
+        <li>Contact information if you email us directly</li>
+    </ul>
+
+    <h3 class="fw-bold mt-4">How We Use Your Information</h3>
+    <ul>
+        <li>To improve site performance and content quality</li>
+        <li>To respond to enquiries</li>
+        <li>To maintain security and prevent misuse</li>
+    </ul>
+
+    <h3 class="fw-bold mt-4">Cookies</h3>
+    <p>
+        NoFoolTools uses cookies for analytics and basic site functionality. You can disable cookies in your browser settings at any time.
+    </p>
+
+    <h3 class="fw-bold mt-4">Third-Party Services</h3>
+    <p>
+        We may use third-party analytics tools such as Google Analytics. These services may collect anonymised usage data.
+    </p>
+
+    <h3 class="fw-bold mt-4">Affiliate Links</h3>
+    <p>
+        Some pages contain affiliate links to Amazon.co.uk. Clicking these links may allow Amazon to track referrals for commission purposes.
+    </p>
+
+    <h3 class="fw-bold mt-4">Your Rights</h3>
+    <ul>
+        <li>Right to access your data</li>
+        <li>Right to request deletion</li>
+        <li>Right to request correction</li>
+        <li>Right to restrict processing</li>
+    </ul>
+
+    <h3 class="fw-bold mt-4">Contact</h3>
+    <p>Email: <strong>privacy@nofooltools.com</strong></p>
+
+    <p class="mt-4 text-muted">Last updated: {{ year }}</p>
+</div>
+
+{% endblock %}

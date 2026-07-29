@@ -1,0 +1,85 @@
+Create a detailed product review in JSON format using the following fields:
+
+Product name: Makita DHP485 Brushless Drill
+featured_image: https://m.media-amazon.com/images/I/71rlawa2ecL.AC_SL1500.jpg  
+affiliate_link: https://www.amazon.co.uk/...
+Category: power-tools, reviews
+
+SEO Requirements:  
+Generate SEO metadata for the article, including:
+
+seo_title — strong, keyword‑rich title
+
+seo_description — 150–160 characters, compelling, keyword‑focused
+
+seo_keywords — comma‑separated list of relevant keywords
+
+canonical_url — https://toolbenchuk.com/article/[slug]
+
+og_image — same as featured_image
+
+twitter_image — same as featured_image
+
+is_featured - true
+
+Content Requirements:  
+Write a highly detailed professional review suitable for tradespeople.
+Include the following sections inside content (HTML allowed):
+
+Overview
+
+Power & Performance
+
+Build Quality
+
+Battery System
+
+Ergonomics
+
+Real‑World Use Cases
+
+Pros & Cons
+
+Conclusion
+
+Additional Requirements:
+
+Include a numeric rating out of 5.
+
+Include a FAQ list with at least 3–4 questions.
+
+Include a valid Schema.org Product object.
+
+Output only JSON, matching this exact structure:
+
+title
+slug
+summary
+featured_image
+affiliate_link
+rating
+content
+faq
+schema
+categories
+seo_title
+seo_description
+seo_keywords
+canonical_url
+og_image
+twitter_image
+is_featured
+
+Important:
+
+affiliate_link must NOT be inside the schema product object.
+
+All SEO fields must be top‑level fields.
+
+JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+
+Do not place affiliate_link inside a product object. It must be at the top level.
+
+
+
+
