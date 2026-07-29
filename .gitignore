@@ -22,6 +22,7 @@ instance/*.sqlite3
 
 # --- Virtual Environments ---
 venv/
+virtualtool/
 env/
 .venv/
 
