@@ -170,12 +170,7 @@ def dashboard():
     return render_template("admin/dashboard.html", articles=articles)
 
 
-# ---------------------------------------------------------
-# NEW AI‑GENERATED ARTICLE
-# ---------------------------------------------------------
-@admin_bp.route("/articles/new", methods=["GET", "POST"])
-@admin_required
-def new_article():
+
     categories = Category.query.all()
 
     if request.method == "POST":
