@@ -3,7 +3,6 @@ from app.models.article import Article, article_categories
 from app.models.category import Category
 from app.models.admin import Admin
 from app.extensions import db
-from app.services.ai_generator import generate_article
 from app.services.slugify import slugify
 from werkzeug.utils import secure_filename
 from app.utils.auth import admin_required
