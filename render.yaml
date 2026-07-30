@@ -22,5 +22,5 @@ services:
 
 databases:
   - name: nofooltools-db
-    plan: basic
+    plan: free
     region: frankfurt
