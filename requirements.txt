@@ -1,6 +1,6 @@
 Flask==3.0.2
 Flask-SQLAlchemy==3.1.1
-SQLAlchemy==2.0.29
+SQLAlchemy==1.4.52
 psycopg2-binary==2.9.9
 python-dotenv==1.0.1
 gunicorn==21.2.0
@@ -12,4 +12,3 @@ click==8.1.7
 alembic==1.13.1
 beautifulsoup4==4.13.2
 requests==2.32.3
-
