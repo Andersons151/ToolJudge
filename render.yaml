@@ -4,17 +4,15 @@ services:
     env: python
     plan: starter
     region: frankfurt
-
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn "app:create_app()"
-
     envVars:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        sync: false
+        value: your-secret-key
       - key: DATABASE_URL
-        sync: false
+        value: ${nofooltools-db.DATABASE_URL}
       - key: PYTHON_VERSION
         value: 3.10
       - key: WEB_CONCURRENCY
