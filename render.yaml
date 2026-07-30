@@ -4,6 +4,7 @@ services:
     env: python
     plan: starter
     region: frankfurt
+    pythonVersion: 3.11
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn "app:create_app()"
     envVars:
@@ -14,7 +15,7 @@ services:
       - key: DATABASE_URL
         value: ${nofooltools-db.DATABASE_URL}
       - key: PYTHON_VERSION
-        value: 3.10
+        value: 3.11
       - key: WEB_CONCURRENCY
         value: 2
       - key: GUNICORN_CMD_ARGS
