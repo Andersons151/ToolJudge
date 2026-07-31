@@ -131,8 +131,8 @@ def create_app():
             "errors/404.html",
             title="404 — Page Not Found",
             seo_title="404 — Page Not Found",
-            seo_description="The page you requested could not be found on NoFoolTools.",
-            seo_keywords="404, page not found, nofooltools"
+            seo_description="The page you requested could not be found on ToolJudge.",
+            seo_keywords="404, page not found, ToolJudge"
         ), 404
 
     @app.errorhandler(500)
@@ -141,8 +141,8 @@ def create_app():
             "errors/500.html",
             title="500 — Server Error",
             seo_title="500 — Server Error",
-            seo_description="A server error occurred while loading NoFoolTools.",
-            seo_keywords="500, server error, nofooltools"
+            seo_description="A server error occurred while loading ToolJudge.",
+            seo_keywords="500, server error, ToolJudge"
         ), 500
 
     return app

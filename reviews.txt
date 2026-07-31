@@ -75,7 +75,7 @@ affiliate_link must NOT be inside the schema product object.
 
 All SEO fields must be top‑level fields.
 
-JSON must be valid and ready for ingestion by the NofoolTools uploader.
+JSON must be valid and ready for ingestion by the ToolJudge uploader.
 
 Do not place affiliate_link inside a product object. It must be at the top level.
 

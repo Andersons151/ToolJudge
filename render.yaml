@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: nofooltools
+    name: ToolJudge
     env: python
     plan: starter
     region: frankfurt
@@ -21,6 +21,6 @@ services:
         value: --timeout 120 --log-level info
 
 databases:
-  - name: nofooltools-db
+  - name: ToolJudge-db
     plan: free
     region: frankfurt

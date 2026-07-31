@@ -21,8 +21,8 @@ def index():
         categories=categories,
         articles=articles,
         featured_articles=featured_articles,
-        title="NoFoolTools — Honest Tool Reviews & Guides",
-        seo_title="NoFoolTools — Honest Tool Reviews & Guides",
+        title="ToolJudge — Honest Tool Reviews & Guides",
+        seo_title="ToolJudge — Honest Tool Reviews & Guides",
         seo_description="Honest tool reviews, comparisons, buying guides and DIY projects — no fluff, no nonsense.",
         seo_keywords="tool reviews, power tools, DIY guides, buying guides, honest reviews"
     )
@@ -92,8 +92,8 @@ def category_page(slug):
     articles = pagination.items
 
     seo_title = f"{category.name} — Reviews & Buying Guides"
-    seo_description = f"Explore honest reviews, comparisons and buying guides for {category.name.lower()} — powered by NoFoolTools."
-    seo_keywords = f"{category.slug}, {category.name}, tool reviews, DIY guides, NoFoolTools"
+    seo_description = f"Explore honest reviews, comparisons and buying guides for {category.name.lower()} — powered by ToolJudge."
+    seo_keywords = f"{category.slug}, {category.name}, tool reviews, DIY guides, ToolJudge"
 
     return render_template(
         "public/category.html",
@@ -114,20 +114,20 @@ def category_page(slug):
 def about():
     return render_template(
         "public/about.html",
-        title="About NoFoolTools",
-        seo_title="About NoFoolTools",
-        seo_description="Learn about NoFoolTools — honest tool reviews, comparisons and DIY guides.",
-        seo_keywords="about nofooltools"
+        title="About ToolJudge",
+        seo_title="About ToolJudge",
+        seo_description="Learn about ToolJudge — honest tool reviews, comparisons and DIY guides.",
+        seo_keywords="about ToolJudge"
     )
 
 @public_bp.route("/contact")
 def contact():
     return render_template(
         "public/contact.html",
-        title="Contact NoFoolTools",
-        seo_title="Contact NoFoolTools",
-        seo_description="Get in touch with NoFoolTools for enquiries, feedback or partnership opportunities.",
-        seo_keywords="contact nofooltools"
+        title="Contact ToolJudge",
+        seo_title="Contact ToolJudge",
+        seo_description="Get in touch with ToolJudge for enquiries, feedback or partnership opportunities.",
+        seo_keywords="contact ToolJudge"
     )
 
 @public_bp.route("/privacy")
@@ -135,9 +135,9 @@ def privacy():
     return render_template(
         "public/privacy.html",
         title="Privacy Policy",
-        seo_title="NoFoolTools Privacy Policy",
-        seo_description="Read the NoFoolTools privacy policy and learn how we handle user data responsibly.",
-        seo_keywords="privacy policy, gdpr, nofooltools"
+        seo_title="ToolJudge Privacy Policy",
+        seo_description="Read the ToolJudge privacy policy and learn how we handle user data responsibly.",
+        seo_keywords="privacy policy, gdpr, ToolJudge"
     )
 
 @public_bp.route("/terms")
@@ -145,9 +145,9 @@ def terms():
     return render_template(
         "public/terms.html",
         title="Terms & Conditions",
-        seo_title="NoFoolTools Terms & Conditions",
-        seo_description="Review the NoFoolTools terms and conditions for using our website and content.",
-        seo_keywords="terms and conditions, nofooltools"
+        seo_title="ToolJudge Terms & Conditions",
+        seo_description="Review the ToolJudge terms and conditions for using our website and content.",
+        seo_keywords="terms and conditions, ToolJudge"
     )
 
 @public_bp.route("/cookies")
@@ -155,9 +155,9 @@ def cookies():
     return render_template(
         "public/cookies.html",
         title="Cookie Policy",
-        seo_title="NoFoolTools Cookie Policy",
-        seo_description="Learn how NoFoolTools uses cookies for analytics and site functionality.",
-        seo_keywords="cookie policy, cookies, nofooltools"
+        seo_title="ToolJudge Cookie Policy",
+        seo_description="Learn how ToolJudge uses cookies for analytics and site functionality.",
+        seo_keywords="cookie policy, cookies, ToolJudge"
     )
 
 @public_bp.route("/affiliate-disclosure")
@@ -165,9 +165,9 @@ def affiliate():
     return render_template(
         "public/affiliate.html",
         title="Affiliate Disclosure",
-        seo_title="NoFoolTools Affiliate Disclosure",
-        seo_description="NoFoolTools participates in affiliate programmes and may earn commissions from qualifying purchases.",
-        seo_keywords="affiliate disclosure, amazon associates, nofooltools"
+        seo_title="ToolJudge Affiliate Disclosure",
+        seo_description="ToolJudge participates in affiliate programmes and may earn commissions from qualifying purchases.",
+        seo_keywords="affiliate disclosure, amazon associates, ToolJudge"
     )
 
 # ---------------------------------------------------------
@@ -203,7 +203,7 @@ def search():
         q=q,
         title=f"Search results for '{q}'",
         seo_title=f"Search results for '{q}'",
-        seo_description=f"NoFoolTools search results for '{q}'.",
+        seo_description=f"ToolJudge search results for '{q}'.",
         seo_keywords=f"tool search, {q}"
     )
 
@@ -229,7 +229,7 @@ def sitemap():
 
     for url, freq, priority in static_urls:
         pages.append({
-            "loc": f"https://nofooltools.com{url}",
+            "loc": f"https://ToolJudge.com{url}",
             "lastmod": datetime.date.today().isoformat(),
             "changefreq": freq,
             "priority": priority
@@ -238,7 +238,7 @@ def sitemap():
     articles = Article.query.all()
     for a in articles:
         pages.append({
-            "loc": f"https://nofooltools.com/article/{a.slug}",
+            "loc": f"https://ToolJudge.com/article/{a.slug}",
             "lastmod": a.created_at.date().isoformat(),
             "changefreq": "monthly",
             "priority": "0.8"
@@ -274,6 +274,6 @@ Allow: /static/css/
 Allow: /static/js/
 Allow: /static/images/
 
-Sitemap: https://nofooltools.com/sitemap.xml
+Sitemap: https://ToolJudge.com/sitemap.xml
 """
     return Response(content, mimetype="text/plain")
