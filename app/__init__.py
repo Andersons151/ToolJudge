@@ -4,6 +4,10 @@ from app.routes.public import public_bp
 from app.routes.admin import admin_bp
 from app.models.category import Category
 from config import get_config
+from sqlalchemy import inspect
+
+
+
 
 
 # def create_app():
@@ -91,6 +95,10 @@ from config import get_config
 def create_app():
     app = Flask(__name__)
     app.config.from_object(get_config())
+    app.config["SQLALCHEMY_DATABASE_URI"] = (
+    "postgresql://tooljudge_db_user:BhHFjTc7espXyKqiuFf09gQs1L9UaEoi@dpg-d9m6j73m8hqs73a1kk00-a.frankfurt-postgres.render.com/tooljudge_db"
+)
+
 
     db.init_app(app)
 

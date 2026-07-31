@@ -22,7 +22,9 @@ class DevelopmentConfig(BaseConfig):
 class ProductionConfig(BaseConfig):
     DEBUG = False
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI ="postgresql://tooljudge_db_user:BhHFjTc7espXyKqiuFf09gQs1L9UaEoi@dpg-d9m6j73m8hqs73a1kk00-a.frankfurt-postgres.render.com/tooljudge_db"
+
 
     if not SQLALCHEMY_DATABASE_URI:
         print("WARNING: DATABASE_URL missing — using SQLite fallback.")

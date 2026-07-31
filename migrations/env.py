@@ -16,6 +16,13 @@ if config.config_file_name is not None:
 # Load Flask app so Alembic can access models
 app = create_app()
 
+# IMPORTANT: Import ALL models so SQLAlchemy registers them
+# Without these imports, db.metadata will be EMPTY
+from app.models.category import Category
+from app.models.admin import Admin
+from app.models.article import Article
+# Add any additional models here
+
 with app.app_context():
     target_metadata = db.metadata
 
