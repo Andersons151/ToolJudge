@@ -43,7 +43,9 @@
     <h4>Categories</h4>
     {% for cat in categories %}
         <label class="me-3">
-            <input type="checkbox" name="categories[]" value="{{ cat.slug }}"
+            <input type="checkbox"
+                   name="categories"
+                   value="{{ cat.slug }}"
                    {% if cat in article.categories %}checked{% endif %}>
             {{ cat.name }}
         </label>
@@ -51,15 +53,12 @@
 
     <hr>
 
-    <!-- ⭐ AUTO-SYNCED FAQ JSON -->
     <h4>FAQ (JSON)</h4>
     <textarea name="faq" class="form-control" rows="6" readonly>{{ faq_json }}</textarea>
 
-    <!-- ⭐ AUTO-GENERATED SCHEMA JSON -->
     <h4 class="mt-4">Schema (JSON)</h4>
     <textarea name="schema" class="form-control" rows="6" readonly>{{ schema_json }}</textarea>
 
-    <!-- ⭐ AUTO-SYNCED COMPARISON JSON -->
     <h4 class="mt-4">Comparison (JSON)</h4>
     <textarea name="comparison" class="form-control" rows="6" readonly>{{ comparison_json }}</textarea>
 
@@ -124,11 +123,10 @@ tinymce.init({
     automatic_uploads: true,
     images_upload_url: '/admin/upload-image',
 
-    valid_elements: '*[*]',  /* prevents TinyMCE stripping FAQ + comparison HTML */
+    valid_elements: '*[*]',
 
     setup: function (editor) {
 
-        // ⭐ Comparison Table Button
         editor.ui.registry.addButton('comparisonTable', {
             text: 'Comparison Table',
             icon: 'table',
@@ -168,12 +166,10 @@ tinymce.init({
             }
         });
 
-        // ⭐ FAQ Generator Button
         editor.ui.registry.addButton('faqGenerator', {
             text: 'Insert FAQ',
             icon: 'help',
             onAction: function () {
-
                 const html = `
 <section class="faq-block">
     <h3>Frequently Asked Questions</h3>
@@ -196,7 +192,6 @@ tinymce.init({
 </section>
 <br>
 `;
-
                 editor.insertContent(html);
             }
         });

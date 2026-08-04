@@ -1,10 +1,9 @@
 Create a detailed DIY project article in JSON format using the following fields:
 
-Project title: [INSERT PROJECT NAME]
+Project title:  Projects with the DEWALT 18V XR Multi-Head Drill Driver, 4 Heads
+featured_image: https://m.media-amazon.com/images/I/710DtJWvp2L._AC_SL1500_.jpg
 
-featured_image: [INSERT IMAGE URL OR LEAVE BLANK]
-
-categories: diy-projects, [INSERT TOOL CATEGORY]
+categories: power-tools, diy-projects, 
 
 
 SEO Requirements (must be included in JSON):
@@ -16,7 +15,7 @@ seo_description — 150–160 characters, compelling, keyword‑focused
 
 seo_keywords — comma‑separated list of relevant keywords
 
-canonical_url — https://toolbenchuk.com/article/[slug]
+canonical_url — https://tooljudge.com/article/[slug]
 
 og_image — same as featured_image
 
@@ -30,6 +29,7 @@ Content Requirements:
 Write a highly detailed DIY guide suitable for beginners and tradespeople.
 
 Include the following sections inside content (HTML allowed):
+Find the products needed on amazon and provide links to them with &tag=footypal0f-21 added to the links so I get commision
 
 Overview
 
@@ -79,6 +79,6 @@ Do NOT include affiliate_link in DIY articles.
 
 All SEO fields must be top‑level only.
 
-JSON must be valid and ready for ingestion by the ToolBench UK uploader.
+JSON must be valid and ready for ingestion by the ToolJudge UK uploader.
 
-Use ToolBench UK tone: professional, trade‑focused, clear, practical.
+Use ToolJudge UK tone: professional, trade‑focused, clear, practical.

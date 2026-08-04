@@ -306,9 +306,9 @@ def edit_article(article_id):
         article.og_image = request.form.get("og_image")
         article.twitter_image = request.form.get("twitter_image")
 
+        # Extract structured content
         faq_json = extract_faq_from_html(article.content)
         article.faq = faq_json
-
         article.schema = generate_faq_schema(faq_json)
 
         comparison_json = extract_comparison_from_html(article.content)
@@ -317,16 +317,19 @@ def edit_article(article_id):
         product_json = extract_product_card_from_html(article.content)
         article.product_card = product_json
 
+        # FIX: Only update categories if the form actually sent some
         selected_slugs = request.form.getlist("categories")
 
-        db.session.execute(
-            article_categories.delete().where(article_categories.c.article_id == article.id)
-        )
+        if selected_slugs:
+            # Clear existing categories ONLY when new ones are submitted
+            db.session.execute(
+                article_categories.delete().where(article_categories.c.article_id == article.id)
+            )
 
-        for slug in selected_slugs:
-            cat = Category.query.filter_by(slug=slug).first()
-            if cat:
-                article.categories.append(cat)
+            for slug in selected_slugs:
+                cat = Category.query.filter_by(slug=slug).first()
+                if cat:
+                    article.categories.append(cat)
 
         db.session.commit()
         return redirect("/admin")
@@ -345,6 +348,7 @@ def edit_article(article_id):
         comparison_json=comparison_json,
         product_card_json=product_card_json
     )
+
 
 
 # ---------------------------------------------------------
