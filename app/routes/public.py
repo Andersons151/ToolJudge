@@ -210,8 +210,11 @@ def search():
 # ---------------------------------------------------------
 # SITEMAP
 # ---------------------------------------------------------
+# ---------------------------------------------------------
 @public_bp.route("/sitemap.xml")
 def sitemap():
+    base_url = "https://tooljudge.onrender.com"
+
     pages = []
     static_urls = [
         ("/", "daily", "1.0"),
@@ -229,7 +232,7 @@ def sitemap():
 
     for url, freq, priority in static_urls:
         pages.append({
-            "loc": f"https://ToolJudge.com{url}",
+            "loc": f"{base_url}{url}",
             "lastmod": datetime.date.today().isoformat(),
             "changefreq": freq,
             "priority": priority
@@ -238,7 +241,7 @@ def sitemap():
     articles = Article.query.all()
     for a in articles:
         pages.append({
-            "loc": f"https://ToolJudge.com/article/{a.slug}",
+            "loc": f"{base_url}/article/{a.slug}",
             "lastmod": a.created_at.date().isoformat(),
             "changefreq": "monthly",
             "priority": "0.8"
@@ -257,6 +260,8 @@ def sitemap():
 
     return Response("\n".join(xml), mimetype="application/xml")
 
+ 
+
 # ---------------------------------------------------------
 # ROBOTS.TXT
 # ---------------------------------------------------------
@@ -274,6 +279,6 @@ Allow: /static/css/
 Allow: /static/js/
 Allow: /static/images/
 
-Sitemap: https://ToolJudge.com/sitemap.xml
+Sitemap: https://tooljudge.onrender.com/sitemap.xml
 """
     return Response(content, mimetype="text/plain")
