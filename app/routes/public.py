@@ -267,17 +267,12 @@ def sitemap():
 # ---------------------------------------------------------
 @public_bp.route("/robots.txt")
 def robots():
-    content = """User-agent: *
+    content = """
+User-agent: *
 Allow: /
 
 Disallow: /admin/
-Disallow: /admin
-Disallow: /upload/
 Disallow: /api/
-
-Allow: /static/css/
-Allow: /static/js/
-Allow: /static/images/
 
 Sitemap: https://tooljudge.onrender.com/sitemap.xml
 """

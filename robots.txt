@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block admin area from indexing
+Disallow: /admin/
+
+# Block internal API routes if any
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://tooljudge.onrender.com/sitemap.xml
